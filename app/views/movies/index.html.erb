@@ -1,8 +1,15 @@
 <h1>Movies
-  <small>
-    <a class="btn btn-success pull-right" href="/movies/new">Add a New Movie</a>
-  </small>
+  <% if session[:user_id] %>
+    <small>
+      <a class="btn btn-success pull-right" href="/movies/new">
+        Add a New Movie</a>
+    </small>
+  <% else %>
+    <p>Sign In to Add Movies</p>
+  <% end %>
 </h1>
+
+<h2><%= cookies.signed["fruit"] %></h2>
 
 <% if session["history"] %>
   <p><small><%= link_to "Clear My Viewing History", "#" %></small></p>

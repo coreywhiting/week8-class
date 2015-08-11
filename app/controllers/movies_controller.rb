@@ -61,6 +61,7 @@ class MoviesController < ApplicationController
   end
 
   def show
+    cookies.signed["fruit"] = "choc chip cookies"
     session["history"] ||= []
     session["history"] << @movie.id
   end

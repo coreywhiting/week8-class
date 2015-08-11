@@ -1,9 +1,9 @@
 User
   name: string
   email: string
-  password: string
   admin: boolean(false)
-  
+  password_digest: string
+
 Movie
   title: string
   year: integer

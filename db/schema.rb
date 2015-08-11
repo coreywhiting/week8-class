@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "users", force: true do |t|
     t.string  "name"
     t.string  "email"
-    t.string  "password"
-    t.boolean "admin",    default: false
+    t.boolean "admin",           default: false
+    t.string  "password_digest"
   end
 
 end
