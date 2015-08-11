@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
   def index
     if params["keyword"].present?
       k = params["keyword"].strip
-      @movies = Movie.where("title LIKE '%#{k}%'")
+      @movies = Movie.where("title LIKE ?", "%#{k}%")
     else
       @movies = Movie.all
     end

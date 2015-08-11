@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def authorize_user
-    if !@user.admin? && @user.id != session[:user_id]
+    if @user.id != params[:id].to_i
       redirect_to root_url, notice: "Nice try!"
     end
   end
