@@ -18,7 +18,7 @@ p {
   font-size: 18px;
 }
 
-nav h1 {
+/*nav h1 {
   background: #009;
   color: white;
   padding: 12px;
@@ -27,7 +27,7 @@ nav h1 {
 nav a, nav a:visited {
  text-decoration: none;
  color: white;
-}
+}*/
 
 h2 {
  color: black;

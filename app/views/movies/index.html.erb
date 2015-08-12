@@ -23,6 +23,7 @@
 <% end %>
 
 <p><%= @movies.count %> movies shown.</p>
+<%= paginate @movies %>
 
 <table class='table table-striped'>
   <thead>
@@ -41,7 +42,7 @@
         </td>
         <td>
           <% if movie.director_id != nil %>
-            <%= link_to Director.find_by(:id => movie.director_id).name, "/directors/#{movie.director_id}" %>
+            <%= link_to movie.director.name, "/directors/#{movie.director_id}" %>
           <% end %>
         </td>
         <td><%= movie.year %></td>

@@ -21,6 +21,9 @@ class MoviesController < ApplicationController
   end
 
   def create
+    # form_params = params.permit(:title, :year, :director_id)
+    # @movie = Movie.new(form_params)
+    #
     @movie = Movie.new
     @movie.title = params["title"]
     @movie.year = params["year"]
@@ -40,6 +43,8 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.all
     end
+
+    @movies = @movies.page(params[:page]).per(4)
 
     respond_to do |format|
       format.html do

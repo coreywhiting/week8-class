@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'kaminari'
 
 gem 'rails', '4.1.8'
 gem 'sqlite3'
